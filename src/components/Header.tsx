@@ -1,10 +1,10 @@
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, Info } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import StoreToggle from './StoreToggle';
 import useStore from '../store';
 
 export default function Header() {
-  const { clearAllData } = useStore();
+  const { clearAllData, toggleInfo } = useStore();
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50">
@@ -17,6 +17,13 @@ export default function Header() {
           </h1>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={toggleInfo}
+              className="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white rounded-full transition-colors"
+              aria-label="Show Information"
+            >
+              <Info className="w-5 h-5" />
+            </button>
             <StoreToggle />
             <button
               onClick={clearAllData}

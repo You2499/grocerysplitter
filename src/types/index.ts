@@ -13,7 +13,11 @@ export interface Group {
 export interface Store {
   groups: Record<number, Group>;
   groupId: number;
+  hasSeenLanding: boolean;
+  showInfo: boolean;
   initializeStore: () => Promise<void>;
+  setHasSeenLanding: (value: boolean) => void;
+  toggleInfo: () => void;
   addGroup: (name: string, date: string) => Promise<void>;
   addTransaction: (groupId: number, transaction: Transaction) => Promise<void>;
   removeTransaction: (groupId: number, index: number) => Promise<void>;

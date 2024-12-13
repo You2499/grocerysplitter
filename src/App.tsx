@@ -5,7 +5,9 @@ import ThemeToggle from './components/ThemeToggle';
 import StoreToggle from './components/StoreToggle';
 import GroupCard from './components/GroupCard';
 import SwitchModal from './components/SwitchModal';
+import InfoModal from './components/InfoModal';
 import Header from './components/Header';
+import LandingPage from './components/LandingPage';
 import { handleDateInput, isValidDate } from './utils/dateUtils';
 
 export default function App() {
@@ -16,7 +18,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [switchInfo, setSwitchInfo] = useState({ groupId: 0, transactionIndex: 0 });
 
-  const { groups, addGroup, clearAllData, initializeStore } = useStore();
+  const { groups, addGroup, hasSeenLanding, initializeStore } = useStore();
 
   useEffect(() => {
     const init = async () => {
@@ -54,9 +56,14 @@ export default function App() {
     );
   }
 
+  if (!hasSeenLanding) {
+    return <LandingPage />;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
+      <InfoModal />
       
       <main className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto space-y-6">

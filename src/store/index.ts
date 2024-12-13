@@ -5,6 +5,8 @@ import * as db from '../lib/db';
 const useStore = create<Store>((set, get) => ({
   groups: {},
   groupId: 0,
+  hasSeenLanding: false,
+  showInfo: false,
 
   initializeStore: async () => {
     const groups = await db.getAllGroups();
@@ -14,11 +16,22 @@ const useStore = create<Store>((set, get) => ({
     }, {} as Record<number, Group>);
     
     const maxId = groups.length > 0 ? Math.max(...groups.map(g => g.id)) : 0;
+    const hasSeenLanding = localStorage.getItem('hasSeenLanding') === 'true';
     
     set({
       groups: groupsMap,
-      groupId: maxId
+      groupId: maxId,
+      hasSeenLanding
     });
+  },
+
+  setHasSeenLanding: (value: boolean) => {
+    localStorage.setItem('hasSeenLanding', String(value));
+    set({ hasSeenLanding: value });
+  },
+
+  toggleInfo: () => {
+    set(state => ({ showInfo: !state.showInfo }));
   },
 
   addGroup: async (name: string, date: string) => {
