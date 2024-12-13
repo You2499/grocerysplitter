@@ -1,8 +1,23 @@
 {
-  "name": "walmart-splitter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "grocerysplitter",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A modern web application for splitting grocery bills among groups",
   "type": "module",
+  "author": "Gagan Gupta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/You2499/grocerysplitter.git"
+  },
+  "keywords": [
+    "grocery",
+    "bill-splitting",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
