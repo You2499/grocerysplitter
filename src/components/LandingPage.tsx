@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react';
 import useStore from '../store';
+import ThemeToggle from './ThemeToggle';
 
 export default function LandingPage() {
   const { setHasSeenLanding } = useStore();
@@ -19,6 +20,18 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
+      <header className="w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div className="container mx-auto px-4">
+          <div className="h-16 flex items-center justify-between">
+            <div className="w-10" /> {/* Spacer to balance the layout */}
+            <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
+              Split Grocery
+            </h1>
+            <ThemeToggle />
+          </div>
+        </div>
+      </header>
+
       <main className="flex-1 flex flex-col items-center justify-center p-4">
         <div className="max-w-3xl w-full space-y-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
