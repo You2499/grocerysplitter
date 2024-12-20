@@ -72,7 +72,11 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <AppLayout theme={theme} onThemeToggle={toggleTheme}>
+      <AppLayout 
+        theme={theme} 
+        onThemeToggle={toggleTheme}
+        showNewTransaction={false}
+      >
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-gray-600 dark:text-gray-400">Loading...</div>
         </div>
@@ -82,7 +86,11 @@ export default function App() {
 
   if (!hasSeenLanding) {
     return (
-      <AppLayout theme={theme} onThemeToggle={toggleTheme}>
+      <AppLayout 
+        theme={theme} 
+        onThemeToggle={toggleTheme}
+        showNewTransaction={false}
+      >
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -104,7 +112,12 @@ export default function App() {
   }
 
   return (
-    <AppLayout theme={theme} onThemeToggle={toggleTheme}>
+    <AppLayout 
+      theme={theme} 
+      onThemeToggle={toggleTheme}
+      onNewTransaction={handleAddGroup}
+      showNewTransaction={true}
+    >
       <div className="space-y-8">
         <form onSubmit={handleAddGroup} className="flex flex-col sm:flex-row gap-4">
           <div className="flex-none w-full sm:w-24">
