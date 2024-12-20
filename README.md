@@ -1,71 +1,56 @@
-# Split Grocery
+# 🛒 GrocerySplitter
 
-A modern web application built with React and TypeScript for splitting grocery bills among groups. Features a clean, responsive UI with dark mode support.
+[![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-blueviolet.svg)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC.svg)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-## Features
+A modern web application for managing and splitting grocery expenses with roommates or groups. Built with React, TypeScript, and TailwindCSS, featuring group management and expense tracking.
 
-- Create and manage multiple shopping groups
-- Add and track transactions within each group
-- Move transactions between groups
-- Dark mode support
-- Responsive design
-- Offline-capable with IndexedDB storage
-- Clean and modern UI with Tailwind CSS
+## ✨ Features
 
-## Tech Stack
+- 👥 Multiple group support
+- 📅 Date-based expense tracking
+- 💰 Smart expense distribution
+- 🌓 Dark Mode with system preference detection
+- 📱 Fully responsive layout
+- 💾 Persistent state management
+- 🎯 Accessible UI components
 
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Zustand (State Management)
-- IndexedDB (Local Storage)
-- Lucide React (Icons)
+## 🚀 Quick Start
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm (v7 or higher)
-
-### Installation
-
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/grocerysplitter.git
+
+# Navigate to the project
 cd grocerysplitter
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start development server
 npm run dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+## 🛠️ Built With
 
-### Building for Production
+- [React](https://reactjs.org/) - UI Framework
+- [TypeScript](https://www.typescriptlang.org/) - Programming Language
+- [Vite](https://vitejs.dev/) - Build Tool
+- [TailwindCSS](https://tailwindcss.com/) - CSS Framework
 
-To create a production build:
+## 📝 License
 
-```bash
-npm run build
-```
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-The built files will be in the `dist` directory.
+## 🤝 Contributing
 
-## Development
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/grocerysplitter/issues).
 
-- `npm run dev` - Start development server
-- `npm run build` - Create production build
-- `npm run lint` - Run ESLint
-- `npm run preview` - Preview production build locally
+## 🔗 Related Projects
 
-## License
-
-MIT License - feel free to use this project for any purpose. 
+Check out our other tools:
+- [ToolKit](https://toolkit.netlify.app/) - Collection of useful web tools
+- [FoodSplitter](https://foodsplitter.netlify.app/) - Split restaurant bills effortlessly
