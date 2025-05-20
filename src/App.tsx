@@ -5,11 +5,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AppLayout } from './components/AppLayout';
 import GroupCard from './components/GroupCard';
 import SwitchModal from './components/SwitchModal';
+import DemoPage from './components/DemoPage';
 import useStore from './store';
 import { handleDateInput, isValidDate } from './utils/dateUtils';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [showDemo, setShowDemo] = useState(false);
   const [date, setDate] = useState('');
   const [dateError, setDateError] = useState<string | null>(null);
   const [groupName, setGroupName] = useState('');
@@ -105,10 +107,20 @@ export default function App() {
             >
               Get Started
             </button>
+            <button
+              onClick={() => setShowDemo(true)}
+              className="mt-4 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
+            >
+              Start Demo
+            </button>
           </div>
         </div>
       </AppLayout>
     );
+  }
+
+  if (showDemo) {
+    return <DemoPage />;
   }
 
   return (

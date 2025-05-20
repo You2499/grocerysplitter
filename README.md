@@ -18,6 +18,16 @@ A modern web application for managing and splitting grocery expenses with roomma
 - 💾 Persistent state management
 - 🎯 Accessible UI components
 
+## Interactive Demo 🚀
+
+New to GrocerySplitter? We've got you covered! An interactive demo is available to guide you through the main functionalities of the application.
+
+To start the demo:
+1.  When you first launch or visit the application, you'll see a welcome screen.
+2.  Click the "Start Demo" button.
+
+The demo will walk you through features such as creating expense groups, adding individual transactions, editing items, and more, helping you get up to speed quickly!
+
 ## 🚀 Quick Start
 
 ```bash

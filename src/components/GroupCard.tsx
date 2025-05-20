@@ -46,6 +46,7 @@ export default function GroupCard({ group, onSwitchTransaction }: GroupCardProps
           <button 
             onClick={() => navigator.clipboard.writeText(`${group.date} ${localStorage.getItem('store') || 'Walmart'} | ${group.name}`)}
             className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            aria-label="Copy group name and date"
           >
             <Copy className="w-4 h-4" />
           </button>
@@ -86,6 +87,7 @@ export default function GroupCard({ group, onSwitchTransaction }: GroupCardProps
               <button
                 onClick={() => setIsEditing(!isEditing)}
                 className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded"
+                aria-label={isEditing ? "Save changes" : "Edit transactions"}
               >
                 {isEditing ? <Save className="w-4 h-4" /> : <Edit className="w-4 h-4" />}
               </button>
@@ -136,6 +138,7 @@ export default function GroupCard({ group, onSwitchTransaction }: GroupCardProps
                       <button
                         onClick={() => onSwitchTransaction(group.id, index)}
                         className="p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-50 rounded"
+                        aria-label="Switch transaction"
                       >
                         <ArrowLeftRight className="w-4 h-4" />
                       </button>
